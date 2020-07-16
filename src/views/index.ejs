@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl" dir="ltr">
+  <%- include('partials/head.ejs') %>
+  <body>
+    <%- include('partials/jumbotron.ejs') %>
+    <main class="container max-width">
+      <div class="row mb-0">
+        <form class="col s12" id="form" method="POST">
+          <div class="row mb-0">
+            <div class="input-field col s12">
+              <input id="url" name="url" type="url" required />
+              <label for="url">Adres strony</label>
+              <span class="helper-text">
+                Na przykład: https://www.example.com
+              </span>
+            </div>
+          </div>
+          <div class="row mb-0">
+            <div class="input-field col s12">
+              <input id="name" name="name" type="text" />
+              <label for="name">Własna nazwa</label>
+              <span class="helper-text">
+                Jeżeli nie podasz własnej nazwy zostanie ona wygenerowana
+                automatycznie. Dozwolone liczby, litery alfabetu angielskiego
+                oraz znaki podkreślenie (_) i myślnik (-).
+              </span>
+            </div>
+          </div>
+          <div class="row center-align">
+            <button
+              class="btn btn-primary waves-effect waves-light"
+              type="submit"
+              title="Wygeneruj link"
+            >
+              Wygeneruj
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="result center-align"></div>
+    </main>
+    <%- include('partials/footer.ejs') %>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
